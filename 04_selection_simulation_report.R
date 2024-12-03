@@ -1,4 +1,4 @@
-path <- "/Users/htr2/Documents/RECOVER/methods/"
+path <- "[Directory where files are being saved]"
 scriptpath <-  paste0(path, "Scripts/")
 
 temppath <- paste0(path, "Temp/")
@@ -136,9 +136,7 @@ color_vec <- color_palette[1:length(comparator_vec)]
 
 #make boxplots
 #now, output the 2x2 grids of metric plots to pages of a pdf document
-cairo_pdf(filename = paste0("/Users/htr2/Documents/RECOVER/methods/Temp/",
-                            "sim_boxplots",
-                            "_2024-04-22.pdf"),
+cairo_pdf(filename = paste0("sim_boxplots.pdf"),
           onefile=TRUE, width=8,height=5)
 
 comparator_vec <- c("lasso_1se","symp_count")
@@ -197,9 +195,7 @@ dev.off()
 
 #make boxplots
 #now, output the 2x2 grids of metric plots to pages of a pdf document
-cairo_pdf(filename = paste0("/Users/htr2/Documents/RECOVER/methods/Temp/",
-                            "sim_boxplots_conf",
-                            "_2024-05-30.pdf"),
+cairo_pdf(filename = paste0("sim_boxplots_conf.pdf"),
           onefile=TRUE, width=5,height=7)
 
 ggplot(data=summ_out_frame_temp %>% filter(metric_name %in% c("auc","aucpr","wilcox_stat")),
